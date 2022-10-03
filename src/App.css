@@ -1,0 +1,11 @@
+thead {
+  border-bottom: 2px solid red;
+}
+
+tr:nth-child(even) {
+  background-color: aliceblue;
+}
+
+* {
+  font-family: "Consolas", Tahoma, Geneva, Verdana, sans-serif;
+}
