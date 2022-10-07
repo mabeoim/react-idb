@@ -1,4 +1,4 @@
-const headers = ["Name", "Occupation", "Hair Color", "Gender", "Phone"];
+export const headers = ["Name", "Occupation", "Hair Color", "Gender", "Phone"];
 
 const renderTH = (header: string, i: number) => <th key={i}>{header}</th>;
 

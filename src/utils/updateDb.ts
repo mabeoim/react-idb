@@ -9,6 +9,7 @@ export default function updateDb(event: any) {
   // unique - or at least that's what I was told during the kickoff meeting.
   const objectStore = db.createObjectStore("humans", {
     keyPath: "phone",
+    autoIncrement: true,
   });
 
   // Create an index to search customers by name. We may have duplicates
@@ -26,7 +27,7 @@ export default function updateDb(event: any) {
     const candidateObjectStore = db
       .transaction("humans", "readwrite")
       .objectStore("humans");
-    tableData().body.forEach((candidate) => {
+    tableData().forEach((candidate) => {
       candidateObjectStore.add(candidate);
     });
   };
